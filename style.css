@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mantenha a altura mínima como 100vh */
+    background-color: #1E1E1E;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Ajusta a largura para 100% */
+    height: auto; /* Deixa a altura automática */
+    max-width: 1280px; /* Máxima largura */
+    height: 720px; /* Altura fixa */
+    background-color: #2F005F;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lado-esquerdo {
+    flex: 1;
+    background-color: #5D2CE7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+.lado-esquerdo img {
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+.lado-esquerdo h2 {
+    font-size: 55px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.lado-direito {
+    flex: 1;
+    background-color: #5D2CE7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+.lado-direito h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lado-direito p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.campo-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Espaço para a imagem do ícone */
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transições adicionadas */
+}
+
+.campo-input input:focus {
+    outline: none; /* Remove o contorno padrão do input */
+    border: 2px solid #090020; /* Muda a cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(161, 110, 255, 0.5); /* Sombra leve ao focar */
+}
+
+.campo-input .icone {
+    position: absolute;
+    right: 10px; /* Alinhe a imagem à direita */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 20px;
+}
+
+button {
+    width: 100%; /* Ajustar a largura do botão */
+    padding: 10px;
+    background-color: #7AFFBF; /* Cor inicial do botão */
+    color: #000; /* Deixar o texto do botão transparente */
+    font-size: 18px;
+    font-weight: normal;
+    border: none; /* Remover a borda do botão */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição para transformação e cor de fundo */
+    text-align: center; /* Centraliza o texto */
+    outline: none; /* Remove a borda preta ao clicar */
+}
+
+button:hover {
+    background-color: #5DFFA8; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
+button:active {
+    transform: scale(0.95); /* Diminui o botão levemente ao clicar */
+    background-color: #4DCC9B; /* Cor de fundo ao clicar */
+}
+
+.registro {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #7AFFBF;
+    text-decoration: none;
+}
+
+.logo {
+    display: block; /* Exibe a logo como um bloco */
+    margin-top: 100px; /* Espaço acima da logo */
+    width: 420px; /* Ajuste o tamanho conforme necessário */
+    max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+footer {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Manter largura como 100% */
+}
+
+.page-wrapper footer {
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: #5D2CE7;
+}
+
+
+
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        height: auto; /* Altura automática */
+    }
+
+    .lado-esquerdo, .lado-direito {
+        width: 100%; /* Cada lado ocupa 100% da largura */
+        height: auto; /* Altura automática */
+    }
+
+    .lado-esquerdo h2 {
+        font-size: 40px; /* Diminuir o tamanho da fonte em telas pequenas */
+    }
+
+    .lado-direito h1 {
+        font-size: 50px; /* Diminuir o tamanho da fonte em telas pequenas */
+    }
+
+    .lado-direito p {
+        font-size: 14px; /* Diminuir o tamanho da fonte em telas pequenas */
+    }
+
+    .campo-input input {
+        font-size: 14px; /* Diminuir o tamanho da fonte dos inputs */
+    }
+
+    button {
+        font-size: 16px; /* Diminuir o tamanho da fonte do botão */
+    }
+
+    .logo {
+        width: 100%; /* Aumentar a largura da logo para 100% */
+        margin-top: 20px; /* Ajustar o espaço acima da logo */
+    }
+}
+
+@media (max-width: 480px) {
+    .lado-esquerdo h2 {
+        font-size: 30px; /* Diminuir ainda mais em telas muito pequenas */
+    }
+
+    .lado-direito h1 {
+        font-size: 36px; /* Diminuir ainda mais em telas muito pequenas */
+    }
+
+    .lado-direito p {
+        font-size: 12px; /* Diminuir ainda mais em telas muito pequenas */
+    }
+
+    .campo-input input {
+        font-size: 12px; /* Diminuir ainda mais em telas muito pequenas */
+    }
+
+    button {
+        font-size: 14px; /* Diminuir ainda mais em telas muito pequenas */
+    }
+}
